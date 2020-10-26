@@ -23,14 +23,56 @@ body {
   align-items:center;
   
 }
-.container{
-  max-width:100vw;
+@media only screen and (max-width: 600px) {
+  .header {
+  width:100vw;
+  height:40vh;
+  }
  
+
 }
-#card{
-  max-width:100vw;
+@media only screen and (max-width: 769px) and (min-width:415px) {
   
+  .form-box{
+    width:500px;
+  }
+  #searchBtn{
+  margin-top:10px;
+  }
+  
+
 }
+@media only screen and (max-width: 415px ) and (min-width:360px){
+.form-box{
+  width:360px;
+}
+#searchBtn{
+margin-top:10px;
+}
+.card{
+  width:8em;
+}
+
+}
+@media only screen and (max-width: 360px ){
+  .form-box{
+    width:280px;
+  }
+  #searchBtn{
+  margin-top:10px;
+  height:40px;
+  width:100px;
+  }
+  .search-field{
+    height:45px;
+    width:100px;
+  }
+  .card{
+    width:5em;
+    
+  }
+
+  }
 
 .search-field{
   height:50px;
@@ -59,28 +101,35 @@ body {
 .card-body{
   background:black;
   color:white;
-  border: 6px inset rgb(53, 50, 50);
-  max-width:100vw;
-  box-shadow: 0 0 20px 7px rgba(0,0,0,0.5);
+  
 }
 
 .card{
   margin:20px 10px;
-  max-width:100vw;
   border:none;
+  width: 24em;
+}
+.card:hover{
+
+  box-shadow: 0 0 20px 7px rgba(0,0,0,0.6);
+}
+ 
+#buttons{
+  margin-left: 40px;
 }
 
 .add{
-  margin:20px 10px;
-  
+  margin:20px 0px;
+  width:195.19;
   border-radius:25px;
+  
 }
 .add:hover{
   background:rgb(201, 0, 0);
   cursor:pointer;
 }
 .del{ 
-  margin:20px 10px;
+  margin:20px 0px;
   border-radius:25px;
 }
 .del:hover{
@@ -103,8 +152,6 @@ body {
   display:flex;
   flex-wrap:wrap;
   max-width:100vw;
-
-
 }
 .container{
   display:flex;
