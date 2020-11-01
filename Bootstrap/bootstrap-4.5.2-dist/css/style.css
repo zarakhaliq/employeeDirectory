@@ -12,6 +12,9 @@ body {
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
 }
+main{
+  overflow-x: auto;
+}
 .header{
   height:50vh;
   width:100vw;
@@ -49,9 +52,14 @@ body {
 #searchBtn{
 margin-top:10px;
 }
-.card{
-  width:8em;
+#card{
+  
+  width:40rem;
 }
+.card{
+  width:22rem;
+} 
+
 
 }
 @media only screen and (max-width: 360px ){
@@ -67,8 +75,12 @@ margin-top:10px;
     height:45px;
     width:100px;
   }
+  #card{
+   
+    width:40rem;
+  }
   .card{
-    width:5em;
+    width:18rem;
     
   }
 
@@ -99,29 +111,31 @@ margin-top:10px;
   padding:30px;
 }
 .card-body{
-  background:black;
-  color:white;
-  
+  background:white;
+  color:rgb(53, 52, 52);
+  height:160;
 }
 
 .card{
-  margin:20px 10px;
+  margin:20px 40px;
   border:none;
-  width: 24em;
+  width:18rem;
+  
 }
 .card:hover{
-
   box-shadow: 0 0 20px 7px rgba(0,0,0,0.6);
 }
+
  
 #buttons{
-  margin-left: 40px;
+  margin-bottom: 20px;
+  padding-left:50px;
 }
 
 .add{
   margin:20px 0px;
-  width:195.19;
-  border-radius:25px;
+  width:200;
+  border-radius:5px 20px 5px;
   
 }
 .add:hover{
@@ -130,24 +144,38 @@ margin-top:10px;
 }
 .del{ 
   margin:20px 0px;
-  border-radius:25px;
+  border-radius:5px 20px 5px;
+  width:200;
 }
 .del:hover{
   background:rgb(201, 0, 0);
   cursor:pointer;
 }
-.added{
+.addLocation{ 
+  margin:20px 0px;
+  border-radius:5px 20px 5px;
+  width:200;
+}
+.addLocation:hover{
+  background:rgb(201, 0, 0);
+  cursor:pointer;
+}
+.delLocation{ 
+  margin:20px 0px;
+  border-radius:5px 20px 5px;
+  width:200;
+}
+.delLocation:hover{
+  background:rgb(201, 0, 0);
+  cursor:pointer;
+}
+.message{
   background:blue;
   color:white;
   padding:5px;
   
 }
-.success{
-  background:blue;
-  color:white;
-  padding:5px;
-  
-}
+
 .row{
   display:flex;
   flex-wrap:wrap;
@@ -157,3 +185,26 @@ margin-top:10px;
   display:flex;
   flex-wrap:wrap;
 }
+.card-header{
+  background:black;
+  color:white;
+  height:50;
+  border-bottom: solid red 2px;
+  justify-content: center;
+}
+.card-footer{
+  background:black;
+  color:white;
+  border-top: solid red 2px;
+  height:50;
+}
+
+.editButton{
+  margin-right:10px;
+
+}
+a{
+  color:rgb(53, 52, 52);
+}
+
+
