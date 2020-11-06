@@ -16,7 +16,7 @@ main{
   overflow-x: auto;
 }
 .header{
-  height:50vh;
+  height:20vh;
   width:100vw;
   background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../../../image.jpg);
   background-size:cover;
@@ -113,7 +113,7 @@ margin-top:10px;
 .card-body{
   background:white;
   color:rgb(53, 52, 52);
-  height:160;
+  height:175;
 }
 
 .card{
@@ -134,7 +134,7 @@ margin-top:10px;
 
 .add{
   margin:20px 0px;
-  width:200;
+  width:205;
   border-radius:5px 20px 5px;
   
 }
@@ -145,7 +145,7 @@ margin-top:10px;
 .del{ 
   margin:20px 0px;
   border-radius:5px 20px 5px;
-  width:200;
+  width:205;
 }
 .del:hover{
   background:rgb(201, 0, 0);
@@ -154,7 +154,7 @@ margin-top:10px;
 .addLocation{ 
   margin:20px 0px;
   border-radius:5px 20px 5px;
-  width:200;
+  width:205;
 }
 .addLocation:hover{
   background:rgb(201, 0, 0);
@@ -163,9 +163,27 @@ margin-top:10px;
 .delLocation{ 
   margin:20px 0px;
   border-radius:5px 20px 5px;
-  width:200;
+  width:205;
 }
 .delLocation:hover{
+  background:rgb(201, 0, 0);
+  cursor:pointer;
+}
+.updateDepartment{ 
+  margin:20px 0px;
+  border-radius:5px 20px 5px;
+  width:205;
+}
+.updateDepartment:hover{
+  background:rgb(201, 0, 0);
+  cursor:pointer;
+}
+.updateL{ 
+  margin:20px 0px;
+  border-radius:5px 20px 5px;
+  width:205;
+}
+.updateL:hover{
   background:rgb(201, 0, 0);
   cursor:pointer;
 }
@@ -206,5 +224,10 @@ margin-top:10px;
 a{
   color:rgb(53, 52, 52);
 }
-
-
+.emailIcon{
+  margin-right:3px;
+}
+.id{
+  font-weight: bold;
+  color:blue
+}
