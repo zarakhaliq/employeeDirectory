@@ -12,8 +12,11 @@ body {
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
 }
+main{
+  overflow-x: auto;
+}
 .header{
-  height:50vh;
+  height:20vh;
   width:100vw;
   background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../../../image.jpg);
   background-size:cover;
@@ -23,14 +26,65 @@ body {
   align-items:center;
   
 }
-.container{
-  max-width:100vw;
+@media only screen and (max-width: 600px) {
+  .header {
+  width:100vw;
+  height:40vh;
+  }
  
+
+}
+@media only screen and (max-width: 769px) and (min-width:415px) {
+  
+  .form-box{
+    width:500px;
+  }
+  #searchBtn{
+  margin-top:10px;
+  }
+  
+
+}
+@media only screen and (max-width: 415px ) and (min-width:360px){
+.form-box{
+  width:360px;
+}
+#searchBtn{
+margin-top:10px;
 }
 #card{
-  max-width:100vw;
   
+  width:40rem;
 }
+.card{
+  width:22rem;
+} 
+
+
+}
+@media only screen and (max-width: 360px ){
+  .form-box{
+    width:280px;
+  }
+  #searchBtn{
+  margin-top:10px;
+  height:40px;
+  width:100px;
+  }
+  .search-field{
+    height:45px;
+    width:100px;
+  }
+  #card{
+   
+    width:40rem;
+  }
+  .card{
+    width:18rem;
+    
+  }
+
+  }
 
 .search-field{
   height:50px;
@@ -57,56 +111,123 @@ body {
   padding:30px;
 }
 .card-body{
-  background:black;
-  color:white;
-  border: 6px inset rgb(53, 50, 50);
-  max-width:100vw;
-  box-shadow: 0 0 20px 7px rgba(0,0,0,0.5);
+  background:white;
+  color:rgb(53, 52, 52);
+  height:175;
 }
 
 .card{
-  margin:20px 10px;
-  max-width:100vw;
+  margin:20px 40px;
   border:none;
+  width:18rem;
+  
+}
+.card:hover{
+  box-shadow: 0 0 20px 7px rgba(0,0,0,0.6);
+}
+
+ 
+#buttons{
+  margin-bottom: 20px;
+  padding-left:50px;
 }
 
 .add{
-  margin:20px 10px;
+  margin:20px 0px;
+  width:205;
+  border-radius:5px 20px 5px;
   
-  border-radius:25px;
 }
 .add:hover{
   background:rgb(201, 0, 0);
   cursor:pointer;
 }
 .del{ 
-  margin:20px 10px;
-  border-radius:25px;
+  margin:20px 0px;
+  border-radius:5px 20px 5px;
+  width:205;
 }
 .del:hover{
   background:rgb(201, 0, 0);
   cursor:pointer;
 }
-.added{
+.addLocation{ 
+  margin:20px 0px;
+  border-radius:5px 20px 5px;
+  width:205;
+}
+.addLocation:hover{
+  background:rgb(201, 0, 0);
+  cursor:pointer;
+}
+.delLocation{ 
+  margin:20px 0px;
+  border-radius:5px 20px 5px;
+  width:205;
+}
+.delLocation:hover{
+  background:rgb(201, 0, 0);
+  cursor:pointer;
+}
+.updateDepartment{ 
+  margin:20px 0px;
+  border-radius:5px 20px 5px;
+  width:205;
+}
+.updateDepartment:hover{
+  background:rgb(201, 0, 0);
+  cursor:pointer;
+}
+.updateL{ 
+  margin:20px 0px;
+  border-radius:5px 20px 5px;
+  width:205;
+}
+.updateL:hover{
+  background:rgb(201, 0, 0);
+  cursor:pointer;
+}
+.message{
   background:blue;
   color:white;
   padding:5px;
   
 }
-.success{
-  background:blue;
-  color:white;
-  padding:5px;
-  
-}
+
 .row{
   display:flex;
   flex-wrap:wrap;
   max-width:100vw;
-
-
 }
 .container{
   display:flex;
   flex-wrap:wrap;
+}
+.card-header{
+  background:black;
+  color:white;
+  height:50;
+  border-bottom: solid red 2px;
+  justify-content: center;
+}
+.card-footer{
+  background:black;
+  color:white;
+  border-top: solid red 2px;
+  height:50;
+}
+
+.editButton{
+  margin-right:10px;
+
+}
+a{
+  color:rgb(53, 52, 52);
+}
+.emailIcon{
+  margin-right:3px;
+}
+.id{
+  font-weight: bold;
+  color:blue
 }
