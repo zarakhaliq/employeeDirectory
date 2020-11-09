@@ -15,6 +15,17 @@ body {
 main{
   overflow-x: auto;
 }
+.navbar-brand{
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+@keyframes example {
+  0%   {color: red;}
+  25%  {color: yellow;}
+  50%  {color: blue;}
+  100% {color: red;}
+}
 .header{
   height:20vh;
   width:100vw;
@@ -29,15 +40,26 @@ main{
 @media only screen and (max-width: 600px) {
   .header {
   width:100vw;
-  height:40vh;
+  height:25vh;
   }
- 
+  .form-box{
+    width:90vw;
+    
+  }
+  #searchBtn{
+    height:40px;
+    }
+  .search-field{
+      height:20px;
+      width:100px;
+    }
 
 }
 @media only screen and (max-width: 769px) and (min-width:415px) {
   
   .form-box{
-    width:500px;
+    width:90vw;
+    
   }
   #searchBtn{
   margin-top:10px;
@@ -46,12 +68,30 @@ main{
 
 }
 @media only screen and (max-width: 415px ) and (min-width:360px){
-.form-box{
-  width:360px;
-}
-#searchBtn{
-margin-top:10px;
-}
+  .search-field{
+    height:30px !important;
+    font-size: medium;
+    border:none;
+    margin-top:5PX;
+    outline:none;
+    width:400px;
+  }
+  .form-box{
+    width:90vw;
+    height:80px;
+    padding:20px !important;
+  }
+  #searchBtn{
+    margin-top:29px !important;
+    height:25px;
+    width:100px;
+    font-size: medium;
+    }
+    .header {
+      width:100vw;
+      height:22vh;
+      }
+      
 #card{
   
   width:40rem;
@@ -63,18 +103,29 @@ margin-top:10px;
 
 }
 @media only screen and (max-width: 360px ){
+  .search-field{
+    height:30px !important;
+    font-size: medium;
+    border:none;
+    margin-top:5PX;
+    outline:none;
+    width:400px;
+  }
+
   .form-box{
     width:280px;
+    height:60px;
+    padding:10px !important;
+  
   }
+  
   #searchBtn{
-  margin-top:10px;
-  height:40px;
+  margin-top:18px !important;
+  height:25px;
   width:100px;
+  font-size: small;
   }
-  .search-field{
-    height:45px;
-    width:100px;
-  }
+  
   #card{
    
     width:40rem;
@@ -83,6 +134,11 @@ margin-top:10px;
     width:18rem;
     
   }
+  .header {
+    width:100vw;
+    height:22vh;
+    }
+    
 
   }
 
@@ -113,7 +169,7 @@ margin-top:10px;
 .card-body{
   background:white;
   color:rgb(53, 52, 52);
-  height:175;
+  height:180;
 }
 
 .card{
@@ -230,4 +286,9 @@ a{
 .id{
   font-weight: bold;
   color:blue
+}
+.myBtn{
+  color:white;
+  background:rgba(24,24,24);
+
 }
