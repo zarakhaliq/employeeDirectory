@@ -7,8 +7,8 @@
 body {
   padding: 0;
   margin: 0;  
-  background:red;
-  max-width:100%;
+  background:white;
+  width:100vw !important;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
 }
@@ -27,8 +27,8 @@ main{
   100% {color: red;}
 }
 .header{
-  height:20vh;
-  width:100vw;
+  height:20%;
+  width:100vw !important;
   background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../../../image.jpg);
   background-size:cover;
   background-position:center;
@@ -37,110 +37,6 @@ main{
   align-items:center;
   
 }
-@media only screen and (max-width: 600px) {
-  .header {
-  width:100vw;
-  height:25vh;
-  }
-  .form-box{
-    width:90vw;
-    
-  }
-  #searchBtn{
-    height:40px;
-    }
-  .search-field{
-      height:20px;
-      width:100px;
-    }
-
-}
-@media only screen and (max-width: 769px) and (min-width:415px) {
-  
-  .form-box{
-    width:90vw;
-    
-  }
-  #searchBtn{
-  margin-top:10px;
-  }
-  
-
-}
-@media only screen and (max-width: 415px ) and (min-width:360px){
-  .search-field{
-    height:30px !important;
-    font-size: medium;
-    border:none;
-    margin-top:5PX;
-    outline:none;
-    width:400px;
-  }
-  .form-box{
-    width:90vw;
-    height:80px;
-    padding:20px !important;
-  }
-  #searchBtn{
-    margin-top:29px !important;
-    height:25px;
-    width:100px;
-    font-size: medium;
-    }
-    .header {
-      width:100vw;
-      height:22vh;
-      }
-      
-#card{
-  
-  width:40rem;
-}
-.card{
-  width:22rem;
-} 
-
-
-}
-@media only screen and (max-width: 360px ){
-  .search-field{
-    height:30px !important;
-    font-size: medium;
-    border:none;
-    margin-top:5PX;
-    outline:none;
-    width:400px;
-  }
-
-  .form-box{
-    width:280px;
-    height:60px;
-    padding:10px !important;
-  
-  }
-  
-  #searchBtn{
-  margin-top:18px !important;
-  height:25px;
-  width:100px;
-  font-size: small;
-  }
-  
-  #card{
-   
-    width:40rem;
-  }
-  .card{
-    width:18rem;
-    
-  }
-  .header {
-    width:100vw;
-    height:22vh;
-    }
-    
-
-  }
 
 .search-field{
   height:50px;
@@ -167,13 +63,13 @@ main{
   padding:30px;
 }
 .card-body{
-  background:white;
-  color:rgb(53, 52, 52);
+  background:rgba(20, 20, 20);
+  color:white;
   height:180;
 }
 
 .card{
-  margin:20px 40px;
+  margin:10px 10px;
   border:none;
   width:18rem;
   
@@ -182,62 +78,86 @@ main{
   box-shadow: 0 0 20px 7px rgba(0,0,0,0.6);
 }
 
+#card{
+  display:flex;
+  flex-wrap:wrap;
+  width:100vw;
+  
+  padding:0;
+  margin:0;
+}
+.cardsContainer{
+  
+  width:100vw;
+  padding-left:0px;
+  margin:0;
+  
+}
  
 #buttons{
-  margin-bottom: 20px;
-  padding-left:50px;
+  margin-bottom: 10px;
+  padding:0px;
+  margin-left:100px;
+  margin-top:10px;
+  display:flex;
 }
 
 .add{
-  margin:20px 0px;
-  width:205;
+  margin:5px 10px;
   border-radius:5px 20px 5px;
-  
+  width:170;
+  font-size: small;
 }
 .add:hover{
   background:rgb(201, 0, 0);
   cursor:pointer;
 }
 .del{ 
-  margin:20px 0px;
+  margin:5px 10px;
   border-radius:5px 20px 5px;
-  width:205;
+  width:170;
+  font-size: small;
 }
 .del:hover{
   background:rgb(201, 0, 0);
   cursor:pointer;
 }
 .addLocation{ 
-  margin:20px 0px;
+  margin:5px 10px;
   border-radius:5px 20px 5px;
-  width:205;
+  width:170;
+  font-size: small;
 }
 .addLocation:hover{
   background:rgb(201, 0, 0);
   cursor:pointer;
 }
 .delLocation{ 
-  margin:20px 0px;
+  margin:5px 10px;
   border-radius:5px 20px 5px;
-  width:205;
+  width:170;
+  font-size: small;
+
 }
 .delLocation:hover{
   background:rgb(201, 0, 0);
   cursor:pointer;
 }
 .updateDepartment{ 
-  margin:20px 0px;
+  margin:5px 10px;
   border-radius:5px 20px 5px;
-  width:205;
+  width:170;
+  font-size: small;
 }
 .updateDepartment:hover{
   background:rgb(201, 0, 0);
   cursor:pointer;
 }
 .updateL{ 
-  margin:20px 0px;
+  margin:5px 10px;
   border-radius:5px 20px 5px;
-  width:205;
+  width:170;
+  font-size: small;
 }
 .updateL:hover{
   background:rgb(201, 0, 0);
@@ -250,26 +170,18 @@ main{
   
 }
 
-.row{
-  display:flex;
-  flex-wrap:wrap;
-  max-width:100vw;
-}
-.container{
-  display:flex;
-  flex-wrap:wrap;
-}
+
 .card-header{
-  background:black;
+  background:rgb(179, 8, 8);
   color:white;
   height:50;
-  border-bottom: solid red 2px;
+  border-bottom: solid white 2px;
   justify-content: center;
 }
 .card-footer{
-  background:black;
+  background:rgb(179, 8, 8);
   color:white;
-  border-top: solid red 2px;
+  border-top: solid white 2px;
   height:50;
 }
 
@@ -277,18 +189,250 @@ main{
   margin-right:10px;
 
 }
-a{
-  color:rgb(53, 52, 52);
+i{
+  color:white;
 }
+
+a{
+  color:white;
+}
+
 .emailIcon{
-  margin-right:3px;
+  margin-right:5px;
 }
 .id{
   font-weight: bold;
-  color:blue
+  display:none;
+}
+.dID{
+ 
+  display:none;
+}
+.L_ID{
+  display:none;
 }
 .myBtn{
   color:white;
   background:rgba(24,24,24);
 
+}
+#removeID{
+  display:none;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+  width:100vw;
+  height:25vh;
+  }
+  .form-box{
+    width:90vw;
+    
+  }
+  #searchBtn{
+    height:40px;
+    }
+  .search-field{
+      height:20px;
+      width:100px;
+    }
+    
+
+}
+@media only screen and (min-width: 767px){
+  #buttons{
+    margin-bottom: 8px;
+    padding:0px;
+    margin-left:80px;
+    margin-right:0px;
+    margin-top:8px;
+  }
+
+}
+@media only screen and (min-width: 1024px){
+  #buttons{
+    margin-bottom: 8px;
+    padding:0px;
+    margin-left:50px;
+    margin-right:0px;
+    margin-top:8px;
+  }
+
+}
+@media only screen and (max-width: 767px) and (min-width:415px) {
+  
+  .form-box{
+    width:90vw;
+    
+  }
+  #searchBtn{
+  margin-top:10px;
+  }
+ 
+  .card{
+  width:16rem;
+  margin-left:40px;
+} 
+.card-body{
+ 
+  height:150;
+}
+#buttons{
+  margin-bottom: 8px;
+  padding:0px;
+  margin-left:5px;
+  margin-right:0px;
+  margin-top:8px;
+}
+  
+
+}
+@media only screen and (max-width: 415px ) and (min-width:360px){
+  .search-field{
+    height:30px !important;
+    font-size: medium;
+    border:none;
+    margin-top:5px;
+    outline:none;
+    width:400px;
+  }
+  .form-box{
+    width:90vw;
+    height:80px;
+    padding:20px !important;
+  }
+  #searchBtn{
+    margin-top:29px !important;
+    height:25px;
+    width:100px;
+    font-size: medium;
+    }
+    .header {
+      width:100vw;
+      height:22vh;
+      }
+      
+.card{
+  width:16rem;
+  margin-left:60px;
+} 
+.card-body{
+ 
+  height:150;
+}
+#buttons{
+  margin-bottom: 10px;
+  padding:0px;
+  margin-left:10px;
+  margin-top:10px;
+}
+
+}
+@media only screen and (max-width: 360px ){
+  .search-field{
+    height:30px !important;
+    font-size: medium;
+    border:none;
+    margin-top:5px;
+    outline:none;
+    width:250px;
+  }
+
+  .form-box{
+    width:280px;
+    height:60px;
+    padding:10px !important;
+  
+  }
+  
+  #searchBtn{
+  margin-top:18px !important;
+  height:25px;
+  width:100px;
+  font-size: small;
+  }
+  
+  
+  .card{
+    width:15rem;
+    margin-left:20px;
+  } 
+  .card-body{
+   
+    height:150;
+  }
+  .header {
+    width:100vw;
+    height:22vh;
+    }
+    #buttons{
+      margin-bottom: 10px;
+      padding:5px;
+      margin-left:20px;
+      margin-top:8px;
+    }
+    .add{
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+      
+    }
+   .addIcon{
+    width:1rem !important; 
+    height:1rem !important;
+   }
+   .deleteIcon{
+    width:1rem !important; 
+    height:1rem !important;
+   }
+   .updateIcon{
+    width:1rem !important; 
+    height:1rem !important;
+   }
+    .del{ 
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+    }
+
+    .addLocation{ 
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+    }
+   
+    .delLocation{ 
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+    
+    }
+  
+    .updateDepartment{ 
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+    }
+   
+    .updateL{ 
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+    }
+
+  }
+
+@media only screen and (max-width:280px){
+  #buttons{
+    margin-bottom: 10px;
+    padding:5px;
+    margin-left:5px;
+    margin-top:8px;
+  }
 }
