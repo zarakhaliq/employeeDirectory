@@ -33,7 +33,8 @@
 	}	
 
 	// $_REQUEST used for development / debugging. Remember to cange to $_POST for production
-	$query = 'UPDATE location SET  name="' . $_REQUEST['newLocation'] . '" WHERE name="' . $_REQUEST['oldLocation']. '"';
+	//$query = 'UPDATE location SET  name="' . $_REQUEST['newLocation'] . '" WHERE name="' . $_REQUEST['oldLocation']. '"';
+	$query='UPDATE location SET name="' .$_REQUEST['text'] .'" WHERE id="' .$_REQUEST['id'] .'";';
    // $query = 'UPDATE location SET  name="' . $_REQUEST['location'] . '" WHERE name="' . $_REQUEST['oldLocation']. '"';
 //$query='UPDATE d SET d.name="'. $_REQUEST["department"] .'" FROM department as d INNER JOIN location as l ON d.locationID= l.id WHERE l.name="' . $_REQUEST["location"] . '"';
 	$result = $conn->query($query);
