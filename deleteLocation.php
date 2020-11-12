@@ -35,7 +35,7 @@
 
 	// $_REQUEST used for development / debugging. Remember to cange to $_POST for production
 
-	$query = 'DELETE FROM location WHERE name= "'. $_POST['location']. '"';
+	$query = 'DELETE FROM location WHERE id= "'. $_POST['locationID']. '"';
 
 	$result = $conn->query($query);
 	
