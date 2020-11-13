@@ -103,6 +103,7 @@ main{
 }
 
 .add{
+  padding:2px;
   margin:5px 10px;
   border-radius:5px 20px 5px;
   width:170;
@@ -113,6 +114,7 @@ main{
   cursor:pointer;
 }
 .del{ 
+  padding:2px;
   margin:5px 10px;
   border-radius:5px 20px 5px;
   width:170;
@@ -123,6 +125,7 @@ main{
   cursor:pointer;
 }
 .addLocation{ 
+  padding:2px;
   margin:5px 10px;
   border-radius:5px 20px 5px;
   width:170;
@@ -133,6 +136,7 @@ main{
   cursor:pointer;
 }
 .delLocation{ 
+  padding:2px;
   margin:5px 10px;
   border-radius:5px 20px 5px;
   width:170;
@@ -144,6 +148,7 @@ main{
   cursor:pointer;
 }
 .updateDepartment{ 
+  padding:2px;
   margin:5px 10px;
   border-radius:5px 20px 5px;
   width:170;
@@ -154,6 +159,7 @@ main{
   cursor:pointer;
 }
 .updateL{ 
+  padding:2px;
   margin:5px 10px;
   border-radius:5px 20px 5px;
   width:170;
@@ -223,94 +229,176 @@ a{
 @media only screen and (max-width: 600px) {
   .header {
   width:100vw;
-  height:25vh;
+  height:12vh;
+  }
+  .search-field{
+    height:20px !important;
+    font-size: small;
+    border:none;
+    outline:none;
+    width:200px;
   }
   .form-box{
     width:90vw;
-    
+    height:10vh;
+   
+    padding-bottom:45px !important;
   }
   #searchBtn{
-    height:40px;
-    }
-  .search-field{
-      height:20px;
-      width:100px;
-    }
+    margin-top:2px !important;
+    height:17px;
+    width:90px;
+    font-size: small;
     
+    }
+    .add{
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+      
+    }
+   .addIcon{
+    width:1rem !important; 
+    height:1rem !important;
+   }
+   .deleteIcon{
+    width:1rem !important; 
+    height:1rem !important;
+   }
+   .updateIcon{
+    width:1rem !important; 
+    height:1rem !important;
+   }
+   #buttons{
+    margin-bottom: 10px;
+    padding:5px;
+    margin-left:20px;
+    margin-top:8px;
+  }
+    .del{ 
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+    }
+
+    .addLocation{ 
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+    }
+   
+    .delLocation{ 
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+    
+    }
+  
+    .updateDepartment{ 
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+    }
+   
+    .updateL{ 
+      margin:5px 5px;
+      border-radius:5px 20px 5px;
+      width:135;
+      font-size: x-small;
+    }
+
 
 }
 @media only screen and (min-width: 767px){
   #buttons{
-    margin-bottom: 8px;
+    margin-bottom: 1px;
     padding:0px;
     margin-left:80px;
     margin-right:0px;
-    margin-top:8px;
+    margin-top:1px;
   }
 
 }
 @media only screen and (min-width: 1024px){
   #buttons{
-    margin-bottom: 8px;
+    margin-bottom:1px;
     padding:0px;
     margin-left:50px;
     margin-right:0px;
-    margin-top:8px;
+    margin-top:1px;
   }
 
 }
 @media only screen and (max-width: 767px) and (min-width:415px) {
   
+   .search-field{
+    height:20px !important;
+    font-size: small;
+    border:none;
+    outline:none;
+    width:200px;
+  }
   .form-box{
     width:90vw;
-    
+    height:10vh;
+   
+    padding-bottom:45px !important;
   }
   #searchBtn{
-  margin-top:10px;
-  }
- 
-  .card{
-  width:16rem;
-  margin-left:40px;
-} 
+    margin-top:2px !important;
+    height:17px;
+    width:90px;
+    font-size: small;
+    
+    }
 .card-body{
  
   height:150;
 }
+.card{
+  width:16rem;
+  margin-left:4px;
+} 
 #buttons{
-  margin-bottom: 8px;
+  
   padding:0px;
-  margin-left:5px;
-  margin-right:0px;
-  margin-top:8px;
+  margin-left:30px !important;
+  margin-bottom:1px;
+  margin-top:1px;
+  
 }
   
 
 }
 @media only screen and (max-width: 415px ) and (min-width:360px){
   .search-field{
-    height:30px !important;
-    font-size: medium;
+    
+    height:20px !important;
+    font-size: small;
     border:none;
-    margin-top:5px;
     outline:none;
-    width:400px;
+    width:140px;
   }
   .form-box{
+   
     width:90vw;
-    height:80px;
-    padding:20px !important;
+    height:10vh;
+    padding:25px !important;
+    
   }
   #searchBtn{
-    margin-top:29px !important;
-    height:25px;
-    width:100px;
-    font-size: medium;
+    margin-top:2px !important;
+    height:20px;
+    width:90px;
+    font-size: small;
+    
     }
-    .header {
-      width:100vw;
-      height:22vh;
-      }
+  
       
 .card{
   width:16rem;
@@ -323,53 +411,51 @@ a{
 #buttons{
   margin-bottom: 10px;
   padding:0px;
-  margin-left:10px;
+  margin-left:20px;
   margin-top:10px;
 }
 
 }
 @media only screen and (max-width: 360px ){
+  .header {
+    width:100vw;
+    height:12vh;
+    }
   .search-field{
-    height:30px !important;
-    font-size: medium;
+    
+    height:20px !important;
+    font-size: small;
     border:none;
-    margin-top:5px;
     outline:none;
-    width:250px;
+    width:140px;
+    
   }
-
   .form-box{
-    width:280px;
-    height:60px;
-    padding:10px !important;
-  
+    width:90vw;
+    height:10vh;
+    padding:15px !important;
   }
-  
   #searchBtn{
-  margin-top:18px !important;
-  height:25px;
-  width:100px;
-  font-size: small;
-  }
-  
+    margin-top:2px !important;
+    height:20px;
+    width:90px;
+    font-size: small;
+    
+    }
   
   .card{
     width:15rem;
-    margin-left:20px;
+    justify-content: center;
   } 
   .card-body{
-   
     height:150;
   }
-  .header {
-    width:100vw;
-    height:22vh;
-    }
+  
     #buttons{
-      margin-bottom: 10px;
-      padding:5px;
+      margin-bottom: 1px !important;
+      padding:0px;
       margin-left:20px;
-      margin-top:8px;
+      margin-top:1px;
     }
     .add{
       margin:5px 5px;
@@ -430,9 +516,13 @@ a{
 
 @media only screen and (max-width:280px){
   #buttons{
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     padding:5px;
     margin-left:5px;
-    margin-top:8px;
+    margin-top:1px;
+    
   }
+  .card{
+  justify-content: center;
+}
 }
