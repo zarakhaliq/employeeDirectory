@@ -1,8 +1,5 @@
 <?php
 
-	// example use from browser
-	// http://localhost/companydirectory/libs/php/insertDepartment.php?name=New%20Department&locationID=1
-
 	// remove next two lines for production
 	
 	ini_set('display_errors', 'On');
@@ -13,8 +10,6 @@
 	include("server.php");
 
 	header('Content-Type: application/json; charset=UTF-8');
-
-	//$conn = new mysqli($cd_host, $cd_user, $cd_password, $cd_dbname, $cd_port, $cd_socket);
 
 	if (mysqli_connect_errno()) {
 		
@@ -32,9 +27,7 @@
 
 	}	
 
-	// $_REQUEST used for development / debugging. Remember to cange to $_POST for production
-
-	$query = 'INSERT INTO location (name) VALUES("' . $_REQUEST['name'] . '")';
+	$query = 'INSERT INTO location (name) VALUES("' . $_POST['name'] . '")';
 
 	$result = $conn->query($query);
 	
