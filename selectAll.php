@@ -1,8 +1,4 @@
 <?php
-
-	// example use from browser
-	// http://localhost/companydirectory/libs/php/getAll.php
-
 	// remove next two lines for production
 	
 	ini_set('display_errors', 'On');
@@ -13,9 +9,6 @@
 	include("server.php");
 
 	header('Content-Type: application/json; charset=UTF-8');
-	//$searchTxt = $_POST['searchText']; 
-
-	//$conn = new mysqli($cd_host, $cd_user, $cd_password, $cd_dbname, $cd_port, $cd_socket);
 
 	if (mysqli_connect_errno()) {
 		
@@ -33,7 +26,6 @@
 
 	}	
 	$query = "SELECT p.lastName, p.firstName, p.id, p.jobTitle, p.email, p.departmentID, d.name as department, l.name as location, l.id as locationID FROM personnel p LEFT JOIN department d ON (d.id = p.departmentID) LEFT JOIN location l ON (l.id = d.locationID) ORDER BY p.firstName";
-	//$query = "SELECT * FROM `personnel` LEFT JOIN department ON (id = locationID)";
 
 	$result = $conn->query($query);
 	
