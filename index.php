@@ -1,4 +1,3 @@
-
 <?php
 include("server.php");
 ?>
@@ -31,16 +30,14 @@ include("server.php");
   </head>
 
   <body>
-    
-
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
       <a class="navbar-brand" href="#">
         <img src="redLogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
     Employee Directory
   </a>
-      
-     
     </nav>
+<!-- Confirmation messaages-->
+
 <div class="success message" style="display:none">
 Search complete!
 </div>
@@ -79,6 +76,8 @@ Error! Something went wrong...
 Data updated successfully!
 </div>
     
+    <!-- Search box -->
+
     <div class="header">
       <form id="searches" method="POST" action="">
         <div class="form-box container">
@@ -89,6 +88,8 @@ Data updated successfully!
         </div>
       </form>
     </div>
+
+    <!-- Add department modal -->
 
 <div class="container" id="buttons">
   <div class="row">
@@ -133,8 +134,8 @@ Data updated successfully!
   </div>
 </div> 
 
-
 <!-- Modal Add Department -->
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -155,7 +156,6 @@ Data updated successfully!
         <label> Location </label>
         <input type="text" id="location" placeholder="Enter your location" class="form-control" required>
 </div>
-
 
 <button type="button" class="btn btn-primary" id="save" name="save">Save changes</button>
       </form>
@@ -181,25 +181,19 @@ Data updated successfully!
       </div>
       <div class="modal-body">
       
-      
         <p id="removeID"></p>
 
         <label> First Name </label>
         <p id="fiName"></p>
 
-
         <label> Last Name </label>
         <p id="laName"></p>
-
 
         <label> Email Address </label>
         <p id="Email"></p>
 
-
-
         <label> Job Title </label>
         <p id="JobTitle"></p>
-
 
         <label> Department </label>
         <p id="DepartmenT"></p>
@@ -207,16 +201,15 @@ Data updated successfully!
         <label> Location </label>
         <p id="Lo"></p>
 
-
       </div>
       <div class="modal-footer">
       <button type="button" class="btn btn-primary" id="remove">Delete</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       
       </div>
     </div>
   </div>
 </div>
+
 <!-- Modal3 Delete department -->
 <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -228,10 +221,10 @@ Data updated successfully!
         </button>
       </div>
       <div class="modal-body">
-      
       <div class="form-group">
+
   <label for="departmentName">Department</label>
-<select class="form-control" id="departmentName" name="name" required>
+  <select class="form-control" id="departmentName" name="name" required>
  
             <option selected>Select Department</option>
             <?php
@@ -240,8 +233,8 @@ Data updated successfully!
                     echo "<option value=\"".$row['id']."\">" . $row['name'] . "</option>";
                 }
             ?>
-</select>
-</div>
+  </select>
+  </div>
       </div>
       <div class="modal-footer">
       <button type="button" class="btn btn-primary" id="delete">Delete</button>
@@ -297,7 +290,6 @@ Data updated successfully!
                 $sql = mysqli_query($conn, "SELECT * FROM department");
                 while ($row = $sql->fetch_assoc()){
                   echo "<option value=".$row['id'].">" . $row['name'] . "</option>";
-                   // echo "<option value=" . $row['id'].">".$row['name']."</option>";
                 }
             ?>
 </select>
@@ -312,21 +304,15 @@ Data updated successfully!
                 $sql = mysqli_query($conn, "SELECT * FROM location");
                 while ($row = $sql->fetch_assoc()){
                   echo "<option value=".$row['id'].">" . $row['name'] . "</option>";
-                   // echo "<option value=" . $row['id'].">".$row['name']."</option>";
                 }
             ?>
-</select>
-       
+</select>    
 </div>
-
-
 <button type="button" class="btn btn-primary" id="update" name="update">Update</button>
       </form>
-        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       
       </div>
     </div>
   </div>
@@ -344,14 +330,12 @@ Data updated successfully!
       </div>
       <div class="modal-body">
       <form action="" method="POST">
-
         <div class="form-group">
         <label> Location </label>
         <input type="text" id="LocationAdd" placeholder="Enter location" class="form-control" required>
 </div>
 <button type="button" class="btn btn-primary" id="addLocation" name="save">Save changes</button>
-      </form>
-        
+      </form> 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -373,11 +357,9 @@ Data updated successfully!
         </button>
       </div>
       <div class="modal-body">
-      
       <div class="form-group">
   <label for="departmentName">Location</label>
 <select class="form-control" id="locationName" name="name" required>
-
             <option selected>Select Location</option>
             <?php
                 $sql = mysqli_query($conn, "SELECT * FROM location");
@@ -391,7 +373,6 @@ Data updated successfully!
       <div class="modal-footer">
       <button type="button" class="btn btn-primary" id="deleteLocation">Delete</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       
       </div>
     </div>
   </div>
@@ -415,7 +396,6 @@ Data updated successfully!
       <th scope="col">#</th>
       <th scope="col">Department</th>
       <th scope="col">LocationID</th>
-      
     </tr>
   </thead>
   <tbody id="table-body">
@@ -423,33 +403,6 @@ Data updated successfully!
   </tbody>
 </table>
      
-<!--
-      <div class="form-group">
-        <label> Department </label>
-        <input type="text" id="oldDepartment" value="Enter department" class="form-control" required>
-</div>
-
-        <div class="form-group">
-        <label> New Department </label>
-        <input type="text" id="dep" value="Enter new department" class="form-control" required>
-</div>
-
-<div class="form-group">
-  <label for="loc">Location</label>
-<select class="form-control" id="loc" name="name" required>
-
-            <option selected>Select Location</option>
-            <?php
-               // $sql = mysqli_query($conn, "SELECT name FROM location");
-                //while ($row = $sql->fetch_assoc()){
-                  //  echo "<option value=\"".$row['name']."\">" . $row['name'] . "</option>";
-                //}
-            ?>
-</select>
-</div>
--->
-
-
 <button type="button" class="btn btn-primary" id="updateDepartment" name="updateDepartment">Update</button>
       
         
@@ -475,13 +428,6 @@ Data updated successfully!
       </div>
       <div class="modal-body">
 
-      
-<!--
-      <div class="form-group">
-        <label> Location </label>
-        <input type="text" id="oldLocation" value="Enter location" class="form-control" required>
-</div>
--->
 <table class="table">
   <thead>
     <tr>
@@ -494,11 +440,6 @@ Data updated successfully!
    
   </tbody>
 </table>
-     
-
-
-
-
 
 <button type="button" class="btn btn-primary" id="updateLoc" name="updateLoc">Update</button>
       </form>
@@ -506,7 +447,6 @@ Data updated successfully!
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       
       </div>
     </div>
   </div>
@@ -519,11 +459,6 @@ Data updated successfully!
 <div id="editForm">
               </div>
 
-
-
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="Bootstrap/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/f3aca67fdb.js" crossorigin="anonymous"></script>
@@ -532,6 +467,7 @@ Data updated successfully!
     </body>
     </html>
     
+
 
 
 
