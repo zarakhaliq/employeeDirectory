@@ -8,9 +8,6 @@ $executionStartTime = microtime(true);
 include("server.php");
 
 header('Content-Type: application/json; charset=UTF-8');
-	//$searchTxt = $_POST['searchText']; 
-
-	//$conn = new mysqli($cd_host, $cd_user, $cd_password, $cd_dbname, $cd_port, $cd_socket);
 
 	if (mysqli_connect_errno()) {
 		
@@ -25,16 +22,11 @@ header('Content-Type: application/json; charset=UTF-8');
 		echo json_encode($output);
 
 		exit;
-
     }	
-    $searchTxt=$_POST['searchTxt'];
-    //if(isset($_POST['search'])){
+	$searchTxt=$_POST['searchTxt'];
+	
         if($searchTxt!== ""){
-            //$query="SELECT * FROM data WHERE id="$searchTxt";
-        
-    
 	$query = "SELECT p.lastName, p.firstName, p.jobTitle, p.email, p.id, d.name as department, l.name as location FROM personnel p LEFT JOIN department d ON (d.id = p.departmentID) LEFT JOIN location l ON (l.id = d.locationID) WHERE p.firstName='$searchTxt' OR p.lastName='$searchTxt' OR p.jobTitle='$searchTxt' OR p.email='$searchTxt' OR d.name='$searchTxt' OR l.name='$searchTxt'";
-	//$query = "SELECT * FROM `personnel` LEFT JOIN department ON (id = locationID)";
 
 	$result = $conn->query($query);
 	
@@ -70,7 +62,6 @@ header('Content-Type: application/json; charset=UTF-8');
 	mysqli_close($conn);
 
     echo json_encode($output); 
-//}
 };
 
 ?>
