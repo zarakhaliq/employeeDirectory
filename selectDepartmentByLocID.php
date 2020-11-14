@@ -1,8 +1,5 @@
 <?php
 
-	// example use from browser
-	// http://localhost/companydirectory/libs/php/getAll.php
-
 	// remove next two lines for production
 	
 	ini_set('display_errors', 'On');
@@ -13,9 +10,6 @@
 	include("server.php");
 
 	header('Content-Type: application/json; charset=UTF-8');
-	//$searchTxt = $_POST['searchText']; 
-
-	//$conn = new mysqli($cd_host, $cd_user, $cd_password, $cd_dbname, $cd_port, $cd_socket);
 
 	if (mysqli_connect_errno()) {
 		
@@ -30,10 +24,8 @@
 		echo json_encode($output);
 
 		exit;
-
 	}	
 	$query ='SELECT * FROM department WHERE locationID="'. $_POST['locationID'].'"';
-	//$query = "SELECT * FROM `personnel` LEFT JOIN department ON (id = locationID)";
 
 	$result = $conn->query($query);
 	
@@ -59,7 +51,6 @@
 		array_push($data, $row);
 
 	}
-
 	$output['status']['code'] = "200";
 	$output['status']['name'] = "ok";
 	$output['status']['description'] = "success";
