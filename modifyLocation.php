@@ -1,9 +1,6 @@
 <?php
 
-	// example use from browser
-	// http://localhost/companydirectory/libs/php/insertDepartment.php?name=New%20Department&locationID=1
-
-	// remove next two lines for production
+// remove next two lines for production
 	
 	ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
@@ -13,8 +10,6 @@
 	include("server.php");
 
 	header('Content-Type: application/json; charset=UTF-8');
-
-	//$conn = new mysqli($cd_host, $cd_user, $cd_password, $cd_dbname, $cd_port, $cd_socket);
 
 	if (mysqli_connect_errno()) {
 		
@@ -32,10 +27,7 @@
 
 	}	
 
-	// $_REQUEST used for development / debugging. Remember to cange to $_POST for production
-	$query = 'UPDATE department SET  locationID="' . $_REQUEST['location'] . '" WHERE id="' . $_REQUEST['department']. '"';
-   // $query = 'UPDATE location SET  name="' . $_REQUEST['location'] . '" WHERE name="' . $_REQUEST['oldLocation']. '"';
-//$query='UPDATE d SET d.name="'. $_REQUEST["department"] .'" FROM department as d INNER JOIN location as l ON d.locationID= l.id WHERE l.name="' . $_REQUEST["location"] . '"';
+	$query = 'UPDATE department SET  locationID="' . $_POST['location'] . '" WHERE id="' . $_POST['department']. '"';
 	$result = $conn->query($query);
 	
 	if (!$result) {
