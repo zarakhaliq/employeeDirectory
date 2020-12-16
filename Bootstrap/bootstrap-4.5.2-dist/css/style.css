@@ -1,532 +1,242 @@
-*{
-  padding:0;
-  margin:0;
-  
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
   padding: 0;
-  margin: 0;  
-  background:white;
-  width:100vw !important;
+  margin: 0;
+  background: #f2f2f2;
+  width: 100vw !important;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-main{
+main {
   overflow-x: auto;
 }
-.navbar-brand{
+.navbar-brand {
   animation-name: example;
   animation-duration: 4s;
   animation-delay: 1s;
 }
 @keyframes example {
-  0%   {color: red;}
-  25%  {color: yellow;}
-  50%  {color: blue;}
-  100% {color: red;}
-}
-.header{
-  height:20%;
-  width:100vw !important;
-  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../../../image.jpg);
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  
+  0% {
+    color: red;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
 }
 
-.search-field{
-  height:50px;
-  padding:10px;
-  border:none;
-  border-radius:25px;
-  outline:none;
-  width:400px;
-}
-.search-btn{
-  height:50px;
-  width:150px;
-  background:rgb(252, 16, 16);
-  border:none;
-  color:white;
-  border-radius:25px;
-}
-.search-btn:hover{
-  background:rgb(201, 0, 0);
-  cursor:pointer;
-}
-.form-box{
-  background:rgba(0,0,0,0.5);
-  padding:30px;
-}
-.card-body{
-  background:rgba(20, 20, 20);
-  color:white;
-  height:180;
+.card-body {
+  background: #ffffff;
+  color: #333333;
+  height: 180;
 }
 
-.card{
-  margin:10px 10px;
-  border:none;
-  width:18rem;
-  
+.card {
+  margin: 10px 20px;
+  border: none;
+  width: 18rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.card:hover{
-  box-shadow: 0 0 20px 7px rgba(0,0,0,0.6);
+.card:hover {
+  box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.6);
 }
 
-#card{
-  display:flex;
-  flex-wrap:wrap;
-  width:100vw;
-  
-  padding:0;
-  margin:0;
+#card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
 }
-.cardsContainer{
-  
-  width:100vw;
-  padding-left:0px;
-  margin:0;
-  
+.cardsContainer {
+  width: 100vw;
+  padding-left: 0px;
+  margin: 0;
 }
- 
-#buttons{
+
+#buttons {
   margin-bottom: 10px;
-  padding:0px;
-  margin-left:100px;
-  margin-top:10px;
-  display:flex;
+  padding: 0px;
+  margin-left: 100px;
+  margin-top: 10px;
+  display: flex;
 }
 
-.add{
-  padding:2px;
-  margin:5px 10px;
-  border-radius:5px 20px 5px;
-  width:170;
-  font-size: small;
-}
-.add:hover{
-  background:rgb(201, 0, 0);
-  cursor:pointer;
-}
-.del{ 
-  padding:2px;
-  margin:5px 10px;
-  border-radius:5px 20px 5px;
-  width:170;
-  font-size: small;
-}
-.del:hover{
-  background:rgb(201, 0, 0);
-  cursor:pointer;
-}
-.addLocation{ 
-  padding:2px;
-  margin:5px 10px;
-  border-radius:5px 20px 5px;
-  width:170;
-  font-size: small;
-}
-.addLocation:hover{
-  background:rgb(201, 0, 0);
-  cursor:pointer;
-}
-.delLocation{ 
-  padding:2px;
-  margin:5px 10px;
-  border-radius:5px 20px 5px;
-  width:170;
-  font-size: small;
-
-}
-.delLocation:hover{
-  background:rgb(201, 0, 0);
-  cursor:pointer;
-}
-.updateDepartment{ 
-  padding:2px;
-  margin:5px 10px;
-  border-radius:5px 20px 5px;
-  width:170;
-  font-size: small;
-}
-.updateDepartment:hover{
-  background:rgb(201, 0, 0);
-  cursor:pointer;
-}
-.updateL{ 
-  padding:2px;
-  margin:5px 10px;
-  border-radius:5px 20px 5px;
-  width:170;
-  font-size: small;
-}
-.updateL:hover{
-  background:rgb(201, 0, 0);
-  cursor:pointer;
-}
-.message{
-  background:blue;
-  color:white;
-  padding:5px;
-  
+.message {
+  background: blue;
+  color: white;
+  padding: 5px;
 }
 
-
-.card-header{
-  background:rgb(179, 8, 8);
-  color:white;
-  height:50;
-  border-bottom: solid white 2px;
+.card-header {
+  background: #ffffff;
+  color: #747474;
+  height: 50;
+  border-bottom: solid red 2px;
   justify-content: center;
 }
-.card-footer{
-  background:rgb(179, 8, 8);
-  color:white;
-  border-top: solid white 2px;
-  height:50;
+.card-footer {
+  background: white;
+  color: #747474;
+  border-top: solid red 2px;
+  height: 50;
 }
 
-.editButton{
-  margin-right:10px;
-
+.editButton {
+  margin-right: 10px;
 }
-i{
-  color:white;
+i {
+  color: #495057;
 }
-
-a{
-  color:white;
+#cardTitle i {
+  color: #999999;
 }
 
-.emailIcon{
-  margin-right:5px;
+a {
+  color: white;
 }
-.id{
+
+.emailIcon {
+  margin-right: 5px;
+}
+.id {
   font-weight: bold;
-  display:none;
+  display: none;
 }
-.dID{
- 
-  display:none;
+.dID {
+  display: none;
 }
-.L_ID{
-  display:none;
+.L_ID {
+  display: none;
 }
-.myBtn{
-  color:white;
-  background:rgba(24,24,24);
-
+.myBtn {
+  color: white;
+  background: rgba(24, 24, 24);
 }
-#removeID{
-  display:none;
+#removeID {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
-  .header {
-  width:100vw;
-  height:12vh;
+  .addIcon {
   }
-  .search-field{
-    height:20px !important;
-    font-size: small;
-    border:none;
-    outline:none;
-    width:200px;
+  .deleteIcon {
   }
-  .form-box{
-    width:90vw;
-    height:10vh;
-   
-    padding-bottom:45px !important;
+  .updateIcon {
   }
-  #searchBtn{
-    margin-top:2px !important;
-    height:17px;
-    width:90px;
-    font-size: small;
-    
-    }
-    .add{
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-      
-    }
-   .addIcon{
-    width:1rem !important; 
-    height:1rem !important;
-   }
-   .deleteIcon{
-    width:1rem !important; 
-    height:1rem !important;
-   }
-   .updateIcon{
-    width:1rem !important; 
-    height:1rem !important;
-   }
-   #buttons{
-    margin-bottom: 10px;
-    padding:5px;
-    margin-left:20px;
-    margin-top:8px;
-  }
-    .del{ 
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-    }
-
-    .addLocation{ 
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-    }
-   
-    .delLocation{ 
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-    
-    }
-  
-    .updateDepartment{ 
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-    }
-   
-    .updateL{ 
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-    }
-
-
 }
-@media only screen and (min-width: 767px){
-  #buttons{
+@media only screen and (min-width: 767px) {
+  #buttons {
     margin-bottom: 1px;
-    padding:0px;
-    margin-left:80px;
-    margin-right:0px;
-    margin-top:1px;
+    padding: 0px;
+    margin-left: 80px;
+    margin-right: 0px;
+    margin-top: 1px;
   }
-
-}
-@media only screen and (min-width: 1024px){
-  #buttons{
-    margin-bottom:1px;
-    padding:0px;
-    margin-left:50px;
-    margin-right:0px;
-    margin-top:1px;
-  }
-
-}
-@media only screen and (max-width: 767px) and (min-width:415px) {
-  
-   .search-field{
-    height:20px !important;
-    font-size: small;
-    border:none;
-    outline:none;
-    width:200px;
-  }
-  .form-box{
-    width:90vw;
-    height:10vh;
-   
-    padding-bottom:45px !important;
-  }
-  #searchBtn{
-    margin-top:2px !important;
-    height:17px;
-    width:90px;
-    font-size: small;
-    
-    }
-.card-body{
- overflow-y:scroll;
-  height:180;
-}
-.card{
-  width:16rem;
-  margin-left:4px;
-} 
-#buttons{
-  
-  padding:0px;
-  margin-left:30px !important;
-  margin-bottom:1px;
-  margin-top:1px;
-  
-}
-  
-
-}
-@media only screen and (max-width: 415px ) and (min-width:360px){
-  .search-field{
-    
-    height:20px !important;
-    font-size: small;
-    border:none;
-    outline:none;
-    width:140px;
-  }
-  .form-box{
-   
-    width:90vw;
-    height:10vh;
-    padding:25px !important;
-    
-  }
-  #searchBtn{
-    margin-top:2px !important;
-    height:20px;
-    width:90px;
-    font-size: small;
-    
-    }
-  
-      
-.card{
-  width:16rem;
-  margin-left:60px;
-} 
-.card-body{
-  overflow-y:scroll;
-  height:180;
-}
-#buttons{
-  margin-bottom: 10px;
-  padding:0px;
-  margin-left:20px;
-  margin-top:10px;
 }
 
+@media only screen and (max-width: 767px) and (min-width: 415px) {
+  .card-body {
+    overflow-y: scroll;
+    height: 180;
+  }
+  .card {
+    width: 16rem;
+    margin-left: 4px;
+  }
 }
-@media only screen and (max-width: 360px ){
-  .header {
-    width:100vw;
-    height:12vh;
-    }
-  .search-field{
-    
-    height:20px !important;
-    font-size: small;
-    border:none;
-    outline:none;
-    width:140px;
-    
-  }
-  .form-box{
-    width:90vw;
-    height:10vh;
-    padding:15px !important;
-  }
-  #searchBtn{
-    margin-top:2px !important;
-    height:20px;
-    width:90px;
-    font-size: small;
-    
-    }
-  
-  .card{
-    width:15rem;
+@media only screen and (max-width: 415px) and (min-width: 360px) {
+  .card {
+    width: 16rem;
     justify-content: center;
-  } 
-  .card-body{
-     overflow-y:scroll;
-    height:180;
   }
-  
-    #buttons{
-      margin-bottom: 1px !important;
-      padding:0px;
-      margin-left:20px;
-      margin-top:1px;
-    }
-    .add{
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-      
-    }
-   .addIcon{
-    width:1rem !important; 
-    height:1rem !important;
-   }
-   .deleteIcon{
-    width:1rem !important; 
-    height:1rem !important;
-   }
-   .updateIcon{
-    width:1rem !important; 
-    height:1rem !important;
-   }
-    .del{ 
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-    }
-
-    .addLocation{ 
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-    }
-   
-    .delLocation{ 
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-    
-    }
-  
-    .updateDepartment{ 
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-    }
-   
-    .updateL{ 
-      margin:5px 5px;
-      border-radius:5px 20px 5px;
-      width:135;
-      font-size: x-small;
-    }
-
+  .card-body {
+    overflow-y: scroll;
+    height: 180;
   }
-
-@media only screen and (max-width:280px){
-  #buttons{
-    margin-bottom: 1px;
-    padding:5px;
-    margin-left:5px;
-    margin-top:1px;
-    
-  }
-  .card{
-  justify-content: center;
 }
-  .card-body{
-    overflow-y:scroll;
+@media only screen and (max-width: 477px) {
+  .search-input[placeholder] {
+    color: red;
   }
+}
+@media only screen and (max-width: 360px) {
+  .card {
+    width: 15rem;
+    justify-content: center;
+  }
+  .card-body {
+    overflow-y: scroll;
+    height: 180;
+  }
+
+  .addIcon {
+  }
+  .deleteIcon {
+  }
+  .updateIcon {
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .card {
+    justify-content: center;
+  }
+  .card-body {
+    overflow-y: scroll;
+  }
+}
+.wrapper {
+  display: flex;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+#sidebar {
+  padding-top: 30px;
+  min-width: 250px;
+  max-width: 250px;
+  background: #2f323a;
+  color: #fff;
+  height: 100vh !important;
+}
+#sidebar a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  line-height: 60px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding-bottom: 10px;
+  transition: 0.5s;
+  transition-property: background;
+}
+#sidebar a:hover {
+  background: red;
+}
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.search-box {
+  padding: 20px 0px;
+}
+#searchBtn {
+  background: red;
+  color: #ffffff;
+  border-radius: 0px;
 }
