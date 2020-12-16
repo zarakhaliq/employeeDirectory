@@ -30,13 +30,86 @@ include("server.php");
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+    
+    <!--Sidebar and Main content-->
+    <div class="wrapper">
+      <nav id="sidebar" class="collapse">
+      <ul class="list-unstyled components">
+      <li>
+<a class="add" data-toggle="modal" data-target="#exampleModal">
+     Add Department
+     <div class="sidebar-icons">
+<img src="bootstrap.svg" style="width: 1.5rem; height:1.5rem;" class="img-fluid addIcon">
+</div>
+</a>
+</li>
+
+<li>
+<a hef="#" class="addLocation" data-toggle="modal" data-target="#exampleModal5">
+     Add Location 
+     
+     <div class="sidebar-icons">
+      <img src="bootstrap.svg" style="width: 1.5rem; height:1.5rem;" class="img-fluid addIcon">
+</div>
+</a>
+</li>
+
+<li>
+<a id="updateDep" class="updateDepartment" data-toggle="modal" data-target="#exampleModal7">
+      Update Department
+   <div class="sidebar-icons">
+    <img src="edit2.svg"  style="width:1.5rem; height:1.5rem;" class="img-fluid updateIcon">
+  </div>
+</a>
+</li>
+
+<li>
+<a id="updateL" class="updateL" data-toggle="modal" data-target="#exampleModal8">
+    Update Location
+  <div class="sidebar-icons">
+    <img src="edit2.svg"  style="width:1.5rem; height:1.5rem; currentColor:white;" class="img-fluid updateIcon">
+  </div>  
+</a>
+</li>
+
+<li>
+<a id="del" class="del" data-toggle="modal" data-target="#exampleModal3">
+    Delete Department
+  <div class="sidebar-icons">
+    <img src="bin2.svg"  style="width:1.5rem; height:1.5rem;" class="img-fluid deleteIcon">
+  </div>
+</a>
+</li>
+
+<li>
+<a id="del" class="delLocation" data-toggle="modal" data-target="#exampleModal6">
+    Delete Location
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <div class="sidebar-icons">
+    <img src="bin2.svg"  style="width:1.5rem; height:1.5rem;" class="img-fluid deleteIcon">
+  </div>
+</a>
+</li>
+
+</ul>
+</nav>
+  <!--Main-->
+<div id="content">
+  <div></div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img src="redLogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
     Employee Directory
   </a>
+  <div class="container-fluid">
+    <button type="button" id="sidebarCollapse" class="btn btn-info" data-toggle="collapse" data-target="#sidebar">
+      <i class="fas fa-align-left"></i>
+    </button>
+</div>
     </nav>
-<!-- Confirmation messaages-->
+ 
+
+ <!-- Confirmation messaages-->
 
 <div class="success message" style="display:none">
 Search complete!
@@ -75,64 +148,35 @@ Error! Something went wrong...
 <div class="updated message" style="display:none">
 Data updated successfully!
 </div>
-    
-    <!-- Search box -->
 
-    <div class="header">
+<!-- Search box -->
+
+<div class="col-md-6 col-lg-8 col-11 mx-auto my-auto search-box">
       <form id="searches" method="POST" action="">
-        <div class="form-box container">
+        <div class="input-group form-container">
     
-          <input type="text"  class="search-field business" name="search-field" id="searchTxt" placeholder="Search">
-          <input class="search-btn" type="button" id="searchBtn" name="search"  value="Search">
+          <input type="text"  class="form-control search-input business" name="search-field" id="searchTxt" placeholder="Enter name, department or location.." autofocus="autofocus" autocomplete="off">
+          <input class="btn btn-search" type="button" id="searchBtn" name="search"  value="Search">
+          
           
         </div>
       </form>
     </div>
 
-    <!-- Add department modal -->
+    <!-- Bootstrap cards (Main) -->
+    <div class="container cardsContainer">
+<div class="row-cols-8 justify-content-lg-center justify-content-md-center justify-content-sm-center" id="card">
 
-<div class="container" id="buttons">
-  <div class="row">
-    <div>
-    <button type="button" class="btn btn-primary add" data-toggle="modal" data-target="#exampleModal">
-     Add Department
-     &nbsp&nbsp<img src="bootstrap.svg" style="width: 1.5rem; height:1.5rem;" class="img-fluid addIcon">
-    </button>
+<div id="editForm">
+              </div>
+ 
+
+
+
 </div>
-<div>
-    <button type="button" class="btn btn-primary addLocation" data-toggle="modal" data-target="#exampleModal5">
-     Add Location
-     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="bootstrap.svg" style="width: 1.5rem; height:1.5rem;" class="img-fluid addIcon">
-    </button>
-    </div>
-   
-    <div>
-    <button type="button" id="updateDep" class="btn btn-primary updateDepartment" data-toggle="modal" data-target="#exampleModal7">
-      Update Department
-    <img src="edit.svg"  style="width:1.5rem; height:1.5rem;" class="img-fluid updateIcon">
-    </button>
-</div>
-    <div>
-    <button type="button" id="updateL" class="btn btn-primary updateL" data-toggle="modal" data-target="#exampleModal8">
-    Update Location
-    &nbsp&nbsp&nbsp<img src="edit.svg"  style="width:1.5rem; height:1.5rem;" class="img-fluid updateIcon">
-    </button>
-    </div>
-   
-    <div>
-    <button type="button" id="del" class="btn btn-primary del" data-toggle="modal" data-target="#exampleModal3">
-    Delete Department
-    <img src="bin.svg"  style="width:1.5rem; height:1.5rem;" class="img-fluid deleteIcon">
-    </button>
-</div>
-    <div>
-    <button type="button" id="del" class="btn btn-primary delLocation" data-toggle="modal" data-target="#exampleModal6">
-    Delete Location
-    &nbsp&nbsp&nbsp&nbsp&nbsp<img src="bin.svg"  style="width:1.5rem; height:1.5rem;" class="img-fluid deleteIcon">
-    </button>
-    </div>
-  </div>
-</div> 
+    
+
+  
 
 <!-- Modal Add Department -->
 
@@ -453,11 +497,7 @@ Data updated successfully!
 </div>
 
 
-<div class="container cardsContainer">
-<div class="row-cols-8 justify-content-md-center" id="card">
 
-<div id="editForm">
-              </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="Bootstrap/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
@@ -467,9 +507,4 @@ Data updated successfully!
     </body>
     </html>
     
-
-
-
-
-
 
